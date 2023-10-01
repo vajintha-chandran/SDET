@@ -1,0 +1,618 @@
+{
+	"info": {
+		"_postman_id": "ae6f56f6-1b0f-4f12-be4e-0a08f7983ba7",
+		"name": "Que 08 - Vajintha Chandran",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11878281"
+	},
+	"item": [
+		{
+			"name": "API",
+			"item": [
+				{
+					"name": "Search by country name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://restcountries.com/v3.1/name/india",
+							"protocol": "https",
+							"host": [
+								"restcountries",
+								"com"
+							],
+							"path": [
+								"v3.1",
+								"name",
+								"india"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Positive TCs",
+			"item": [
+				{
+					"name": "Search by country | name",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Verifying Response Status code : 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verifying Response Status code name : OK\", () => {\r",
+									"  pm.response.to.have.status(\"OK\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verifying Content-Type header : application/json\", () => {\r",
+									"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verifying Country Official and Common Names : Commonwealth of Australia | Australia\", function() {\r",
+									"    const responeJson = pm.response.json();\r",
+									"    pm.expect(responeJson[0].name.official).to.eql(\"Commonwealth of Australia\");\r",
+									"    pm.expect(responeJson[0].name.common).to.eql(\"Australia\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verifying data type of Latitute and longitude : number\", function() {\r",
+									"    const responeJson = pm.response.json();\r",
+									"    pm.expect(responeJson[0].latlng).to.be.a(\"array\");\r",
+									"    pm.expect(responeJson[0].latlng[0]).to.be.a(\"number\");\r",
+									"    pm.expect(responeJson[0].latlng[1]).to.be.a(\"number\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verifying Continent of the Country is one of available 7 continents : Yes and Valid\", function() {\r",
+									"    const responeJson = pm.response.json();\r",
+									"    pm.expect(responeJson[0].continents[0]).to.be.oneOf([\"Asia\", \"Africa\", \"North America\", \"South America\", \"Antarctica\", \"Europe\", \"Oceania\"]);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verifying Response time is less than 2s\", () => {\r",
+									"  pm.expect(pm.response.responseTime).to.be.below(2000);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://restcountries.com/v3.1/name/australia",
+							"protocol": "https",
+							"host": [
+								"restcountries",
+								"com"
+							],
+							"path": [
+								"v3.1",
+								"name",
+								"australia"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search by country | name = all in UPPER case",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Verifying Response Status code : 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verifying Response Status code name : OK\", () => {\r",
+									"  pm.response.to.have.status(\"OK\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verifying Content-Type header : application/json\", () => {\r",
+									"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verifying Country Official and Common Names : Japan | Japan\", function() {\r",
+									"    const responeJson = pm.response.json();\r",
+									"    pm.expect(responeJson[0].name.official).to.eql(\"Japan\");\r",
+									"    pm.expect(responeJson[0].name.common).to.eql(\"Japan\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verifying data type of Latitute and longitude : number\", function() {\r",
+									"    const responeJson = pm.response.json();\r",
+									"    pm.expect(responeJson[0].latlng).to.be.a(\"array\");\r",
+									"    pm.expect(responeJson[0].latlng[0]).to.be.a(\"number\");\r",
+									"    pm.expect(responeJson[0].latlng[1]).to.be.a(\"number\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verifying Continent of the Country is one of available 7 continents : Yes and Valid\", function() {\r",
+									"    const responeJson = pm.response.json();\r",
+									"    pm.expect(responeJson[0].continents[0]).to.be.oneOf([\"Asia\", \"Africa\", \"North America\", \"South America\", \"Antarctica\", \"Europe\", \"Oceania\"]);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verifying Response time is less than 2s\", () => {\r",
+									"  pm.expect(pm.response.responseTime).to.be.below(2000);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://restcountries.com/v3.1/name/JAPAN",
+							"protocol": "https",
+							"host": [
+								"restcountries",
+								"com"
+							],
+							"path": [
+								"v3.1",
+								"name",
+								"JAPAN"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search by country | http instead of https",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Verifying Response Status code : 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verifying Response Status code name : OK\", () => {\r",
+									"  pm.response.to.have.status(\"OK\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verifying Content-Type header : application/json\", () => {\r",
+									"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verifying Country Official and Common Names : Commonwealth of Australia | Australia\", function() {\r",
+									"    const responeJson = pm.response.json();\r",
+									"    pm.expect(responeJson[0].name.official).to.eql(\"Commonwealth of Australia\");\r",
+									"    pm.expect(responeJson[0].name.common).to.eql(\"Australia\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verifying data type of Latitute and longitude : number\", function() {\r",
+									"    const responeJson = pm.response.json();\r",
+									"    pm.expect(responeJson[0].latlng).to.be.a(\"array\");\r",
+									"    pm.expect(responeJson[0].latlng[0]).to.be.a(\"number\");\r",
+									"    pm.expect(responeJson[0].latlng[1]).to.be.a(\"number\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verifying Continent of the Country is one of available 7 continents : Yes and Valid\", function() {\r",
+									"    const responeJson = pm.response.json();\r",
+									"    pm.expect(responeJson[0].continents[0]).to.be.oneOf([\"Asia\", \"Africa\", \"North America\", \"South America\", \"Antarctica\", \"Europe\", \"Oceania\"]);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verifying Response time is less than 2s\", () => {\r",
+									"  pm.expect(pm.response.responseTime).to.be.below(2000);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://restcountries.com/v3.1/name/Australia",
+							"protocol": "http",
+							"host": [
+								"restcountries",
+								"com"
+							],
+							"path": [
+								"v3.1",
+								"name",
+								"Australia"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Negative TCs",
+			"item": [
+				{
+					"name": "Search by country | name=null",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Verifying Response Status code : 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verifying Response Status code name : Not found\", () => {\r",
+									"  pm.response.to.have.status(\"Not Found\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verifying Content-Type header : application/json\", () => {\r",
+									"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verifying error status and message avilable in the response body : 404 | Not Found\", function() {\r",
+									"    const responeJson = pm.response.json();\r",
+									"    pm.expect(responeJson.status).to.eql(404);\r",
+									"    pm.expect(responeJson.message).to.eql(\"Not Found\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://restcountries.com/v3.1/name/null",
+							"protocol": "https",
+							"host": [
+								"restcountries",
+								"com"
+							],
+							"path": [
+								"v3.1",
+								"name",
+								"null"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search by country |  name is empty",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Verifying Response Status code : 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verifying Response Status code name : Not found\", () => {\r",
+									"  pm.response.to.have.status(\"Not Found\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verifying Content-Type header : application/json\", () => {\r",
+									"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verifying error message avilable in the response body : Page Not Found\", function() {\r",
+									"    const responeJson = pm.response.json();\r",
+									"    pm.expect(responeJson.message).to.eql(\"Page Not Found\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://restcountries.com/v3.1/name/",
+							"protocol": "https",
+							"host": [
+								"restcountries",
+								"com"
+							],
+							"path": [
+								"v3.1",
+								"name",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search by country | name = empty string",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Verifying Response Status code : 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verifying Response Status code name : Not found\", () => {\r",
+									"  pm.response.to.have.status(\"Not Found\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verifying Content-Type header : application/json\", () => {\r",
+									"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verifying error status and message avilable in the response body : 404 | Not Found\", function() {\r",
+									"    const responeJson = pm.response.json();\r",
+									"    pm.expect(responeJson.status).to.eql(404);\r",
+									"    pm.expect(responeJson.message).to.eql(\"Not Found\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://restcountries.com/v3.1/name/\"\"",
+							"protocol": "https",
+							"host": [
+								"restcountries",
+								"com"
+							],
+							"path": [
+								"v3.1",
+								"name",
+								"\"\""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search by country | name = invalid name",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Verifying Response Status code : 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verifying Response Status code name : Not found\", () => {\r",
+									"  pm.response.to.have.status(\"Not Found\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verifying Content-Type header : application/json\", () => {\r",
+									"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verifying error status and message avilable in the response body : 404 | Not Found\", function() {\r",
+									"    const responeJson = pm.response.json();\r",
+									"    pm.expect(responeJson.status).to.eql(404);\r",
+									"    pm.expect(responeJson.message).to.eql(\"Not Found\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://restcountries.com/v3.1/name/zzz",
+							"protocol": "https",
+							"host": [
+								"restcountries",
+								"com"
+							],
+							"path": [
+								"v3.1",
+								"name",
+								"zzz"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search by country | name = number",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Verifying Response Status code : 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verifying Response Status code name : Not found\", () => {\r",
+									"  pm.response.to.have.status(\"Not Found\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verifying Content-Type header : application/json\", () => {\r",
+									"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verifying error status and message avilable in the response body : 404 | Not Found\", function() {\r",
+									"    const responeJson = pm.response.json();\r",
+									"    pm.expect(responeJson.status).to.eql(404);\r",
+									"    pm.expect(responeJson.message).to.eql(\"Not Found\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://restcountries.com/v3.1/name/123",
+							"protocol": "https",
+							"host": [
+								"restcountries",
+								"com"
+							],
+							"path": [
+								"v3.1",
+								"name",
+								"123"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search by country | POST method instead of GET",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Verifying Response Status code : 405\", function () {\r",
+									"    pm.response.to.have.status(405);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verifying Response Status code name : Method Not Allowed\", () => {\r",
+									"  pm.response.to.have.status(\"Method Not Allowed\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verifying Content-Type header : application/json\", () => {\r",
+									"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verifying error message avilable in the response body : Method [POST] not allowed for URI [/v3.1/name/India]. Allowed methods: [HEAD, GET]\", function() {\r",
+									"    const responeJson = pm.response.json();\r",
+									"    pm.expect(responeJson.message).to.eql(\"Method [POST] not allowed for URI [/v3.1/name/India]. Allowed methods: [HEAD, GET]\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://restcountries.com/v3.1/name/India",
+							"protocol": "https",
+							"host": [
+								"restcountries",
+								"com"
+							],
+							"path": [
+								"v3.1",
+								"name",
+								"India"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search by country | PUT method instead of GET",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Verifying Response Status code : 405\", function () {\r",
+									"    pm.response.to.have.status(405);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verifying Response Status code name : Method Not Allowed\", () => {\r",
+									"  pm.response.to.have.status(\"Method Not Allowed\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verifying Content-Type header : application/json\", () => {\r",
+									"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verifying error message avilable in the response body : Method [PUT] not allowed for URI [/v3.1/name/India]. Allowed methods: [HEAD, GET]\", function() {\r",
+									"    const responeJson = pm.response.json();\r",
+									"    pm.expect(responeJson.message).to.eql(\"Method [PUT] not allowed for URI [/v3.1/name/India]. Allowed methods: [HEAD, GET]\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://restcountries.com/v3.1/name/India",
+							"protocol": "https",
+							"host": [
+								"restcountries",
+								"com"
+							],
+							"path": [
+								"v3.1",
+								"name",
+								"India"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search by country | DELETE method instead of GET",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Verifying Response Status code : 405\", function () {\r",
+									"    pm.response.to.have.status(405);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verifying Response Status code name : Method Not Allowed\", () => {\r",
+									"  pm.response.to.have.status(\"Method Not Allowed\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verifying Content-Type header : application/json\", () => {\r",
+									"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verifying error message avilable in the response body : Method [DELETE] not allowed for URI [/v3.1/name/India]. Allowed methods: [HEAD, GET]]\", function() {\r",
+									"    const responeJson = pm.response.json();\r",
+									"    pm.expect(responeJson.message).to.eql(\"Method [DELETE] not allowed for URI [/v3.1/name/India]. Allowed methods: [HEAD, GET]\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://restcountries.com/v3.1/name/India",
+							"protocol": "https",
+							"host": [
+								"restcountries",
+								"com"
+							],
+							"path": [
+								"v3.1",
+								"name",
+								"India"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

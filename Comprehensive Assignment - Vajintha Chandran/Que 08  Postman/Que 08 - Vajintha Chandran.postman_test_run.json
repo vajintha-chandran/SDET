@@ -1,0 +1,637 @@
+{
+	"id": "ef20923d-453c-4d4c-8c23-fe0da35f71b5",
+	"name": "Que 08 - Vajintha Chandran",
+	"timestamp": "2023-09-24T11:17:29.030Z",
+	"collection_id": "11878281-ae6f56f6-1b0f-4f12-be4e-0a08f7983ba7",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 53,
+	"delay": "2000",
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2023-09-24T11:16:55.037Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "bcb2c9af-3b17-43a8-abd8-7a4e0519a95c",
+			"name": "Search by country name",
+			"url": "https://restcountries.com/v3.1/name/india",
+			"time": 1282,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				1282
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "a7360fc1-aab9-405c-8aca-12f38d0a1a6a",
+			"name": "Search by country | name",
+			"url": "https://restcountries.com/v3.1/name/australia",
+			"time": 1612,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Verifying Response Status code : 200": true,
+				"Verifying Response Status code name : OK": true,
+				"Verifying Content-Type header : application/json": true,
+				"Verifying Country Official and Common Names : Commonwealth of Australia | Australia": true,
+				"Verifying data type of Latitute and longitude : number": true,
+				"Verifying Continent of the Country is one of available 7 continents : Yes and Valid": true,
+				"Verifying Response time is less than 2s": true
+			},
+			"testPassFailCounts": {
+				"Verifying Response Status code : 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verifying Response Status code name : OK": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verifying Content-Type header : application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verifying Country Official and Common Names : Commonwealth of Australia | Australia": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verifying data type of Latitute and longitude : number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verifying Continent of the Country is one of available 7 continents : Yes and Valid": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verifying Response time is less than 2s": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				1612
+			],
+			"allTests": [
+				{
+					"Verifying Response Status code : 200": true,
+					"Verifying Response Status code name : OK": true,
+					"Verifying Content-Type header : application/json": true,
+					"Verifying Country Official and Common Names : Commonwealth of Australia | Australia": true,
+					"Verifying data type of Latitute and longitude : number": true,
+					"Verifying Continent of the Country is one of available 7 continents : Yes and Valid": true,
+					"Verifying Response time is less than 2s": true
+				}
+			]
+		},
+		{
+			"id": "ba0989b3-b5fd-4a7b-bde1-74d3027bca99",
+			"name": "Search by country | name = all in UPPER case",
+			"url": "https://restcountries.com/v3.1/name/JAPAN",
+			"time": 1168,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Verifying Response Status code : 200": true,
+				"Verifying Response Status code name : OK": true,
+				"Verifying Content-Type header : application/json": true,
+				"Verifying Country Official and Common Names : Japan | Japan": true,
+				"Verifying data type of Latitute and longitude : number": true,
+				"Verifying Continent of the Country is one of available 7 continents : Yes and Valid": true,
+				"Verifying Response time is less than 2s": true
+			},
+			"testPassFailCounts": {
+				"Verifying Response Status code : 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verifying Response Status code name : OK": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verifying Content-Type header : application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verifying Country Official and Common Names : Japan | Japan": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verifying data type of Latitute and longitude : number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verifying Continent of the Country is one of available 7 continents : Yes and Valid": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verifying Response time is less than 2s": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				1168
+			],
+			"allTests": [
+				{
+					"Verifying Response Status code : 200": true,
+					"Verifying Response Status code name : OK": true,
+					"Verifying Content-Type header : application/json": true,
+					"Verifying Country Official and Common Names : Japan | Japan": true,
+					"Verifying data type of Latitute and longitude : number": true,
+					"Verifying Continent of the Country is one of available 7 continents : Yes and Valid": true,
+					"Verifying Response time is less than 2s": true
+				}
+			]
+		},
+		{
+			"id": "3fa3d816-41b2-4e5c-91c9-756dff44667e",
+			"name": "Search by country | http instead of https",
+			"url": "http://restcountries.com/v3.1/name/Australia",
+			"time": 618,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Verifying Response Status code : 200": true,
+				"Verifying Response Status code name : OK": true,
+				"Verifying Content-Type header : application/json": true,
+				"Verifying Country Official and Common Names : Commonwealth of Australia | Australia": true,
+				"Verifying data type of Latitute and longitude : number": true,
+				"Verifying Continent of the Country is one of available 7 continents : Yes and Valid": true,
+				"Verifying Response time is less than 2s": true
+			},
+			"testPassFailCounts": {
+				"Verifying Response Status code : 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verifying Response Status code name : OK": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verifying Content-Type header : application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verifying Country Official and Common Names : Commonwealth of Australia | Australia": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verifying data type of Latitute and longitude : number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verifying Continent of the Country is one of available 7 continents : Yes and Valid": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verifying Response time is less than 2s": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				618
+			],
+			"allTests": [
+				{
+					"Verifying Response Status code : 200": true,
+					"Verifying Response Status code name : OK": true,
+					"Verifying Content-Type header : application/json": true,
+					"Verifying Country Official and Common Names : Commonwealth of Australia | Australia": true,
+					"Verifying data type of Latitute and longitude : number": true,
+					"Verifying Continent of the Country is one of available 7 continents : Yes and Valid": true,
+					"Verifying Response time is less than 2s": true
+				}
+			]
+		},
+		{
+			"id": "3fe5f24b-b624-41d3-9fe6-570c0a3f4a2f",
+			"name": "Search by country | name=null",
+			"url": "https://restcountries.com/v3.1/name/null",
+			"time": 385,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Verifying Response Status code : 404": true,
+				"Verifying Response Status code name : Not found": true,
+				"Verifying Content-Type header : application/json": true,
+				"Verifying error status and message avilable in the response body : 404 | Not Found": true
+			},
+			"testPassFailCounts": {
+				"Verifying Response Status code : 404": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verifying Response Status code name : Not found": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verifying Content-Type header : application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verifying error status and message avilable in the response body : 404 | Not Found": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				385
+			],
+			"allTests": [
+				{
+					"Verifying Response Status code : 404": true,
+					"Verifying Response Status code name : Not found": true,
+					"Verifying Content-Type header : application/json": true,
+					"Verifying error status and message avilable in the response body : 404 | Not Found": true
+				}
+			]
+		},
+		{
+			"id": "0ace4360-dee3-4a8d-b6a0-8ea00f6f0249",
+			"name": "Search by country |  name is empty",
+			"url": "https://restcountries.com/v3.1/name/",
+			"time": 319,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Verifying Response Status code : 404": true,
+				"Verifying Response Status code name : Not found": true,
+				"Verifying Content-Type header : application/json": true,
+				"Verifying error message avilable in the response body : Page Not Found": true
+			},
+			"testPassFailCounts": {
+				"Verifying Response Status code : 404": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verifying Response Status code name : Not found": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verifying Content-Type header : application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verifying error message avilable in the response body : Page Not Found": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				319
+			],
+			"allTests": [
+				{
+					"Verifying Response Status code : 404": true,
+					"Verifying Response Status code name : Not found": true,
+					"Verifying Content-Type header : application/json": true,
+					"Verifying error message avilable in the response body : Page Not Found": true
+				}
+			]
+		},
+		{
+			"id": "5a0bfe57-7207-4fc0-9a5a-135e8bf2c067",
+			"name": "Search by country | name = empty string",
+			"url": "https://restcountries.com/v3.1/name/\"\"",
+			"time": 386,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Verifying Response Status code : 404": true,
+				"Verifying Response Status code name : Not found": true,
+				"Verifying Content-Type header : application/json": true,
+				"Verifying error status and message avilable in the response body : 404 | Not Found": true
+			},
+			"testPassFailCounts": {
+				"Verifying Response Status code : 404": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verifying Response Status code name : Not found": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verifying Content-Type header : application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verifying error status and message avilable in the response body : 404 | Not Found": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				386
+			],
+			"allTests": [
+				{
+					"Verifying Response Status code : 404": true,
+					"Verifying Response Status code name : Not found": true,
+					"Verifying Content-Type header : application/json": true,
+					"Verifying error status and message avilable in the response body : 404 | Not Found": true
+				}
+			]
+		},
+		{
+			"id": "29bcfc6a-c15e-4377-98ae-81c6d826aabc",
+			"name": "Search by country | name = invalid name",
+			"url": "https://restcountries.com/v3.1/name/zzz",
+			"time": 383,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Verifying Response Status code : 404": true,
+				"Verifying Response Status code name : Not found": true,
+				"Verifying Content-Type header : application/json": true,
+				"Verifying error status and message avilable in the response body : 404 | Not Found": true
+			},
+			"testPassFailCounts": {
+				"Verifying Response Status code : 404": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verifying Response Status code name : Not found": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verifying Content-Type header : application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verifying error status and message avilable in the response body : 404 | Not Found": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				383
+			],
+			"allTests": [
+				{
+					"Verifying Response Status code : 404": true,
+					"Verifying Response Status code name : Not found": true,
+					"Verifying Content-Type header : application/json": true,
+					"Verifying error status and message avilable in the response body : 404 | Not Found": true
+				}
+			]
+		},
+		{
+			"id": "087ea558-3404-40df-acc0-8183e906a989",
+			"name": "Search by country | name = number",
+			"url": "https://restcountries.com/v3.1/name/123",
+			"time": 397,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Verifying Response Status code : 404": true,
+				"Verifying Response Status code name : Not found": true,
+				"Verifying Content-Type header : application/json": true,
+				"Verifying error status and message avilable in the response body : 404 | Not Found": true
+			},
+			"testPassFailCounts": {
+				"Verifying Response Status code : 404": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verifying Response Status code name : Not found": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verifying Content-Type header : application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verifying error status and message avilable in the response body : 404 | Not Found": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				397
+			],
+			"allTests": [
+				{
+					"Verifying Response Status code : 404": true,
+					"Verifying Response Status code name : Not found": true,
+					"Verifying Content-Type header : application/json": true,
+					"Verifying error status and message avilable in the response body : 404 | Not Found": true
+				}
+			]
+		},
+		{
+			"id": "99986d81-9966-4cca-acb4-61b7cea838e0",
+			"name": "Search by country | POST method instead of GET",
+			"url": "https://restcountries.com/v3.1/name/India",
+			"time": 347,
+			"responseCode": {
+				"code": 405,
+				"name": "Method Not Allowed"
+			},
+			"tests": {
+				"Verifying Response Status code : 405": true,
+				"Verifying Response Status code name : Method Not Allowed": true,
+				"Verifying Content-Type header : application/json": true,
+				"Verifying error message avilable in the response body : Method [POST] not allowed for URI [/v3.1/name/India]. Allowed methods: [HEAD, GET]": true
+			},
+			"testPassFailCounts": {
+				"Verifying Response Status code : 405": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verifying Response Status code name : Method Not Allowed": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verifying Content-Type header : application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verifying error message avilable in the response body : Method [POST] not allowed for URI [/v3.1/name/India]. Allowed methods: [HEAD, GET]": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				347
+			],
+			"allTests": [
+				{
+					"Verifying Response Status code : 405": true,
+					"Verifying Response Status code name : Method Not Allowed": true,
+					"Verifying Content-Type header : application/json": true,
+					"Verifying error message avilable in the response body : Method [POST] not allowed for URI [/v3.1/name/India]. Allowed methods: [HEAD, GET]": true
+				}
+			]
+		},
+		{
+			"id": "4dbd5e86-fa87-45cf-b691-8e7558874fc8",
+			"name": "Search by country | PUT method instead of GET",
+			"url": "https://restcountries.com/v3.1/name/India",
+			"time": 566,
+			"responseCode": {
+				"code": 405,
+				"name": "Method Not Allowed"
+			},
+			"tests": {
+				"Verifying Response Status code : 405": true,
+				"Verifying Response Status code name : Method Not Allowed": true,
+				"Verifying Content-Type header : application/json": true,
+				"Verifying error message avilable in the response body : Method [PUT] not allowed for URI [/v3.1/name/India]. Allowed methods: [HEAD, GET]": true
+			},
+			"testPassFailCounts": {
+				"Verifying Response Status code : 405": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verifying Response Status code name : Method Not Allowed": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verifying Content-Type header : application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verifying error message avilable in the response body : Method [PUT] not allowed for URI [/v3.1/name/India]. Allowed methods: [HEAD, GET]": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				566
+			],
+			"allTests": [
+				{
+					"Verifying Response Status code : 405": true,
+					"Verifying Response Status code name : Method Not Allowed": true,
+					"Verifying Content-Type header : application/json": true,
+					"Verifying error message avilable in the response body : Method [PUT] not allowed for URI [/v3.1/name/India]. Allowed methods: [HEAD, GET]": true
+				}
+			]
+		},
+		{
+			"id": "8cf69a47-02d0-42be-a1e9-d6a40d48e459",
+			"name": "Search by country | DELETE method instead of GET",
+			"url": "https://restcountries.com/v3.1/name/India",
+			"time": 319,
+			"responseCode": {
+				"code": 405,
+				"name": "Method Not Allowed"
+			},
+			"tests": {
+				"Verifying Response Status code : 405": true,
+				"Verifying Response Status code name : Method Not Allowed": true,
+				"Verifying Content-Type header : application/json": true,
+				"Verifying error message avilable in the response body : Method [DELETE] not allowed for URI [/v3.1/name/India]. Allowed methods: [HEAD, GET]]": true
+			},
+			"testPassFailCounts": {
+				"Verifying Response Status code : 405": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verifying Response Status code name : Method Not Allowed": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verifying Content-Type header : application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verifying error message avilable in the response body : Method [DELETE] not allowed for URI [/v3.1/name/India]. Allowed methods: [HEAD, GET]]": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				319
+			],
+			"allTests": [
+				{
+					"Verifying Response Status code : 405": true,
+					"Verifying Response Status code name : Method Not Allowed": true,
+					"Verifying Content-Type header : application/json": true,
+					"Verifying error message avilable in the response body : Method [DELETE] not allowed for URI [/v3.1/name/India]. Allowed methods: [HEAD, GET]]": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 7782,
+	"collection": {
+		"requests": [
+			{
+				"id": "bcb2c9af-3b17-43a8-abd8-7a4e0519a95c",
+				"method": "GET"
+			},
+			{
+				"id": "a7360fc1-aab9-405c-8aca-12f38d0a1a6a",
+				"method": "GET"
+			},
+			{
+				"id": "ba0989b3-b5fd-4a7b-bde1-74d3027bca99",
+				"method": "GET"
+			},
+			{
+				"id": "3fa3d816-41b2-4e5c-91c9-756dff44667e",
+				"method": "GET"
+			},
+			{
+				"id": "3fe5f24b-b624-41d3-9fe6-570c0a3f4a2f",
+				"method": "GET"
+			},
+			{
+				"id": "0ace4360-dee3-4a8d-b6a0-8ea00f6f0249",
+				"method": "GET"
+			},
+			{
+				"id": "5a0bfe57-7207-4fc0-9a5a-135e8bf2c067",
+				"method": "GET"
+			},
+			{
+				"id": "29bcfc6a-c15e-4377-98ae-81c6d826aabc",
+				"method": "GET"
+			},
+			{
+				"id": "087ea558-3404-40df-acc0-8183e906a989",
+				"method": "GET"
+			},
+			{
+				"id": "99986d81-9966-4cca-acb4-61b7cea838e0",
+				"method": "POST"
+			},
+			{
+				"id": "4dbd5e86-fa87-45cf-b691-8e7558874fc8",
+				"method": "PUT"
+			},
+			{
+				"id": "8cf69a47-02d0-42be-a1e9-d6a40d48e459",
+				"method": "DELETE"
+			}
+		]
+	}
+}
